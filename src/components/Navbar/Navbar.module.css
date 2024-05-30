@@ -1,0 +1,119 @@
+nav {
+    background-color: green;
+    overflow: hidden;
+    position: relative;
+
+    a, h1 {
+        color: #fff;
+    }
+
+    .bars {
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .nav_con {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        & a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+       
+    }
+
+    .nav_con ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 0 35px;
+
+            & a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .button a {
+        background-color: #fff;
+        color: #0085ff;        
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0 ,0.3);
+        }
+
+        & a {
+            text-decoration: none;
+            color: #333;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav_con {
+        flex-direction: column;
+        align-items: flex-start;
+
+        ul, .button {
+            display: none !important;
+        }
+    }
+
+    .mobile_menu{
+        list-style: none;
+        padding: 0;
+        margin: 0 35px;
+
+
+        li {
+            margin: 10px 0;
+
+            a {
+                text-decoration: none;
+                color: #FFF;
+            }
+        }
+    }
+
+    .mobile_button a {
+        background-color: #fff;
+        color: #0085ff;
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (min-width: 481px){
+    .mobile_menu, .bars, .mobile_button{
+        display: none;
+    }
+}
